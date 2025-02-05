@@ -1,0 +1,119 @@
+* {
+    font-family: "Inter", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px; /* Prevents elements from touching the edge on small screens */
+}
+
+.hero {
+    max-width: 90%; /* Adjust width for smaller screens */
+    width: 1000px;
+    height: auto; /* Allows height to adjust */
+    border-radius: 25px;
+    background-color: #696969;
+    box-shadow: inset 0px 0px 50px hsl(0, 0%, 25%);
+    display: flex; 
+    flex-wrap: wrap; /* Allows stacking on small screens */
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    text-align: center;
+}
+
+.text-frame {
+    max-width: 100%;
+    flex: 1; /* Makes both text and image take equal space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-frame h1 {
+    font-size: 50px;
+    text-shadow: 3px 3px 3px hsl(0, 0%, 0%);
+    margin: 10px 0;
+}
+
+.text-frame p {
+    font-size: 24px;
+    text-shadow: 2px 2px 2px hsl(0, 0%, 0%);
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+.pfp-frame {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pfp-frame img {
+    max-width: 100%; /* Ensures the image scales */
+    height: auto;
+    width: 300px; /* Default width */
+    border-radius: 50%;
+}
+
+.logos {
+    display: flex;
+    gap: 10px;
+}
+
+.logos img {
+    width: 40px;
+    height: 40px;
+}
+
+/* 📱 Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-frame h1 {
+        font-size: 40px;
+    }
+
+    .text-frame p {
+        font-size: 18px;
+    }
+
+    .pfp-frame img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-frame h1 {
+        font-size: 32px;
+    }
+
+    .text-frame p {
+        font-size: 16px;
+    }
+
+    .pfp-frame img {
+        width: 200px;
+    }
+
+    .logos img {
+        width: 30px;
+        height: 30px;
+ 
+    }
+}
